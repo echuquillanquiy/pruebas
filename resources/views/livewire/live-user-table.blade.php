@@ -9,6 +9,7 @@
                             <option value="10">10</option>
                             <option value="15">15</option>
                             <option value="20">20</option>
+                            <option value="100">100</option>
                         </select>
                         <input type="text"
                                class="shadow-sm sm:text-sm border-gray-300 rounded-md w-full text-gray-500 ml-6"

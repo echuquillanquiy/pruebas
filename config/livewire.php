@@ -54,7 +54,7 @@ return [
     |
     */
 
-    'asset_url' => 'http://localhost/hedialv3/public',
+    'asset_url' => null,
 
     /*
     |--------------------------------------------------------------------------
