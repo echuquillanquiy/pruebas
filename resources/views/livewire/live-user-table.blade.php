@@ -1,10 +1,10 @@
 <div class="flex flex-col">
     <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
-        <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
-            <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
-                <div class="bg-white px-4 py-3 items-center justify-between border-t border-gray-200 sm:px-6">
+        <div class="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
+            <div class="overflow-hidden border-b border-gray-200 shadow sm:rounded-lg">
+                <div class="items-center justify-between px-4 py-3 bg-white border-t border-gray-200 sm:px-6">
                     <div class="flex text-gray-500">
-                        <select class="block w-600 px-6 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" wire:model="perPage" >
+                        <select class="block px-6 bg-white border border-gray-300 rounded-md shadow-sm w-600 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" wire:model="perPage" >
                             <option value="5">5</option>
                             <option value="10">10</option>
                             <option value="15">15</option>
@@ -12,7 +12,7 @@
                             <option value="100">100</option>
                         </select>
                         <input type="text"
-                               class="shadow-sm sm:text-sm border-gray-300 rounded-md w-full text-gray-500 ml-6"
+                               class="w-full ml-6 text-gray-500 border-gray-300 rounded-md shadow-sm sm:text-sm"
                                wire:model="search"
                                placeholder="Ingrese el termino de busqueda">
                         <button wire:click="clear" class="ml-6">
@@ -24,31 +24,31 @@
                 <table class="min-w-full divide-y divide-gray-200">
                     <thead class="bg-gray-50">
                         <tr>
-                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                            <th scope="col" class="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase">
                                 id
                                 <button wire:click="sortable('id')">
                                     <span class="fa fa{{ $camp === 'id' ? $icon: '-circle' }}"></span>
                                 </button>
                             </th>
-                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                            <th scope="col" class="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase">
                                 name
                                 <button wire:click="sortable('name')">
                                     <span class="fa fa{{ $camp === 'name' ? $icon: '-circle' }}"></span>
                                 </button>
                             </th>
-                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                            <th scope="col" class="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase">
                                 Email
                                 <button wire:click="sortable('email')">
                                     <span class="fa fa{{ $camp === 'email' ? $icon: '-circle' }}"></span>
                                 </button>
                             </th>
-                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                            <th scope="col" class="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase">
                                 username
                                 <button wire:click="sortable('username')">
                                     <span class="fa fa{{ $camp === 'username' ? $icon: '-circle' }}"></span>
                                 </button>
                             </th>
-                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                            <th scope="col" class="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase">
                                 Role
                             </th>
                             <th scope="col" class="relative px-6 py-3">
@@ -72,17 +72,17 @@
                                 <div class="text-sm text-gray-900">{{ $user->name }}</div>
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap">
-                                <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+                                <span class="inline-flex px-2 text-xs font-semibold leading-5 text-green-800 bg-green-100 rounded-full">
                                   {{ $user->email }}
                                 </span>
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap">
                                 <div class="text-sm text-gray-900">{{ $user->username }}</div>
                             </td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                            <td class="px-6 py-4 text-sm text-gray-500 whitespace-nowrap">
                                 Admin
                             </td>
-                            <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                            <td class="px-6 py-4 text-sm font-medium text-right whitespace-nowrap">
                                 <a href="#" class="text-indigo-600 hover:text-indigo-900">Edit</a>
                             </td>
                         </tr>
@@ -90,7 +90,7 @@
                     <!-- More items... -->
                     </tbody>
                 </table>
-                <div class="bg-white px-4 py-3 items-center justify-between border-t border-gray-200 sm:px-6">
+                <div class="items-center justify-between px-4 py-3 bg-white border-t border-gray-200 sm:px-6">
                     {{ $users->links() }}
                 </div>
             </div>
