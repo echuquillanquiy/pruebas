@@ -31,11 +31,19 @@
                                 </button>
                             </th>
                             <th scope="col" class="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase">
-                                name
+                                Nombres
                                 <button wire:click="sortable('name')">
                                     <span class="fa fa{{ $camp === 'name' ? $icon: '-circle' }}"></span>
                                 </button>
                             </th>
+
+                            <th scope="col" class="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase">
+                                Apellidos
+                                <button wire:click="sortable('lastname')">
+                                    <span class="fa fa{{ $camp === 'lastname' ? $icon: '-circle' }}"></span>
+                                </button>
+                            </th>
+
                             <th scope="col" class="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase">
                                 Email
                                 <button wire:click="sortable('email')">
@@ -71,6 +79,11 @@
                             <td class="px-6 py-4 whitespace-nowrap">
                                 <div class="text-sm text-gray-900">{{ $user->name }}</div>
                             </td>
+
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <div class="text-sm text-gray-900">{{ $user->r_lastname->lastname }}</div>
+                            </td>
+
                             <td class="px-6 py-4 whitespace-nowrap">
                                 <span class="inline-flex px-2 text-xs font-semibold leading-5 text-green-800 bg-green-100 rounded-full">
                                   {{ $user->email }}
